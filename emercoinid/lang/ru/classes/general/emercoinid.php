@@ -1,5 +1,4 @@
 <?
-<?
 $MESS["socserv_emercoinid_authurl"] = "Страница авторизации (Auth Page):";
 $MESS["socserv_emercoinid_authurl_note"] = "Emercoin ID Страница авторизации (Например: https://id.emercoin.net/oauth/v2/auth)";
 $MESS["socserv_emercoinid_tokenurl"] = "Страница токена (Token Page):";
