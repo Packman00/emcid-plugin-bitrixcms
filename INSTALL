@@ -1,11 +1,11 @@
 Make the Emercoin ID Application:
- - Log in to any Emercoin ID webserver with EMC SSL certificate (such as https://oauth.authorizer.io)
+ - Log in to any Emercoin ID webserver with EMC SSL certificate (such as https://id.emercoin.net/)
  - Create the app
  - Use URI as https://YOUR_HOSTNAME/bitrix/tools/oauth/emercoinid.php
 
 
 Module installation and configuration:
- - Zip the folder 'emercoinid' (such as 'zip -r emercoinid.zip emercoinid')
+ - Unzip the archive
  - Upload 'emercoinid' folder into '/bitrix/modules/' directory of your site
  - Go to Settings -> Modules -> Authorisation with Emercoin ID, press the 'install' button
  - Go to Settings -> Module settings and select 'Authorisation with Emercoin ID' in select list
