@@ -505,7 +505,7 @@ class CEmercoinIDOAuthInterface extends CEmcOAuthTransport
 		$h = new \Bitrix\Main\Web\HttpClient();
 		$h->setHeader("Authorization", "Bearer ".$this->access_token);
 
-		$result = $h->get(static::TOKEN_URL.'/'.$this->access_token);
+		$result = $h->get(static::ACCOUNT_URL.'/'.$this->access_token);
 
 		$result = \Bitrix\Main\Web\Json::decode($result);
 
