@@ -33,12 +33,6 @@ class CEmcEmercoinIDAuth extends CEmcAuth
 	public function GetSettings()
 	{
 		return array(
-			array("emercoinid_authurl", GetMessage("socserv_emercoinid_authurl"), "", array("text", 40)),
-			array("note"=>GetMessage("socserv_emercoinid_authurl_note")),
-			array("emercoinid_tokenurl", GetMessage("socserv_emercoinid_tokenurl"), "", array("text", 40)),
-			array("note"=>GetMessage("socserv_emercoinid_tokenurl_note")),
-			array("emercoinid_accounturl", GetMessage("socserv_emercoinid_accounturl"), "", array("text", 40)),
-			array("note"=>GetMessage("socserv_emercoinid_accounturl_note")),
 			array("emercoinid_appid", GetMessage("socserv_emercoinid_client_id"), "", array("text", 40)),
 			array("emercoinid_appsecret", GetMessage("socserv_emercoinid_client_secret"), "", array("text", 40)),
 			array("note"=>GetMessage("socserv_emercoinid_note", array('#URL#'=>CEmercoinIDOAuthInterface::GetRedirectURI()))),
@@ -447,7 +441,7 @@ class CEmercoinIDOAuthInterface extends CEmcOAuthTransport
 
 	public function GetAuthUrl($redirect_uri, $state = '')
 	{
-		return $this->authUrl.
+		return static::AUTH_URL.
 		"?client_id=".urlencode($this->appID).
 		"&redirect_uri=".urlencode($redirect_uri).
 		"&response_type=code".
@@ -511,7 +505,7 @@ class CEmercoinIDOAuthInterface extends CEmcOAuthTransport
 		$h = new \Bitrix\Main\Web\HttpClient();
 		$h->setHeader("Authorization", "Bearer ".$this->access_token);
 
-		$result = $h->get($this->accountUrl.'/'.$this->access_token);
+		$result = $h->get(static::ACCOUNT_URL.'/'.$this->access_token);
 
 		$result = \Bitrix\Main\Web\Json::decode($result);
 
