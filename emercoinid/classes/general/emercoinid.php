@@ -403,11 +403,6 @@ class CEmercoinIDOAuthInterface extends CEmcOAuthTransport
 {
 	const SERVICE_ID = "EmercoinID";
 
-	const AUTH_URL = "https://oauth.authorizer.io/oauth/v2/auth";
-	const TOKEN_URL = "https://oauth.authorizer.io/oauth/v2/token";
-
-	const ACCOUNT_URL = "https://oauth.authorizer.io/infocard";
-
 	protected $oauthResult;
 
 	public function __construct($authUrl = false, $authToken = false, $accountUrl = false, $appID = false, $appSecret = false, $code = false)
@@ -476,7 +471,7 @@ class CEmercoinIDOAuthInterface extends CEmcOAuthTransport
 		}
 
 		$h = new \Bitrix\Main\Web\HttpClient();
-		$result = $h->post(static::TOKEN_URL, array(
+		$result = $h->post($this->authToken, array(
 			"code"=>$this->code,
 			"client_id"=>$this->appID,
 			"client_secret"=>$this->appSecret,
