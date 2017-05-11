@@ -33,9 +33,12 @@ class CEmcEmercoinIDAuth extends CEmcAuth
 	public function GetSettings()
 	{
 		return array(
-			array("emercoinid_authurl", GetMessage("socserv_emercoinid_authurl"), "", array("text", 60)),
-			array("emercoinid_tokenurl", GetMessage("socserv_emercoinid_tokenurl"), "", array("text", 60)),
-			array("emercoinid_accounturl", GetMessage("socserv_emercoinid_accounturl"), "", array("text", 60)),
+			array("emercoinid_authurl", GetMessage("socserv_emercoinid_authurl"), "", array("text", 40)),
+			array("note"=>GetMessage("socserv_emercoinid_authurl_note")),
+			array("emercoinid_tokenurl", GetMessage("socserv_emercoinid_tokenurl"), "", array("text", 40)),
+			array("note"=>GetMessage("socserv_emercoinid_tokenurl_note")),
+			array("emercoinid_accounturl", GetMessage("socserv_emercoinid_accounturl"), "", array("text", 40)),
+			array("note"=>GetMessage("socserv_emercoinid_accounturl_note")),
 			array("emercoinid_appid", GetMessage("socserv_emercoinid_client_id"), "", array("text", 40)),
 			array("emercoinid_appsecret", GetMessage("socserv_emercoinid_client_secret"), "", array("text", 40)),
 			array("note"=>GetMessage("socserv_emercoinid_note", array('#URL#'=>CEmercoinIDOAuthInterface::GetRedirectURI()))),

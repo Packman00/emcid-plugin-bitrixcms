@@ -5,8 +5,8 @@ Make the Emercoin ID Application:
 
 Module installation and configuration:
  - Upload 'emercoinid' folder into '/bitrix/modules/' directory of your site
- - Go to Settings -> Modules -> Authorisation with Emercoin ID, press the 'install' button
- - Go to Settings -> Module settings and select 'Authorisation with Emercoin ID' in select list
+ - Go to Settings -> System settings -> Modules -> Authorization with Emercoin ID, press the 'install' button
+ - Go to Settings -> System settings -> Module settings and select 'Authorization with Emercoin ID' in select list
  - Configure the module
 
 After that you can add 'Emercoin ID Authorization' component into any place of your site via visual redactor or adding component code (see below).
